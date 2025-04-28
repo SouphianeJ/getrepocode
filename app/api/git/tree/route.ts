@@ -24,7 +24,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Invalid GitHub URL' }, { status: 400 });
   }
 
-  const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   try {
     const { data } = await octokit.rest.git.getTree({
       owner: info.owner,
