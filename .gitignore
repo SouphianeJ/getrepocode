@@ -2,7 +2,7 @@
 .env.local
 package-lock.json
 pnpm-lock.yaml
-nodes_modules
+node_modules
 .next
 
 
