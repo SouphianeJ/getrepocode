@@ -5,15 +5,16 @@ import React from 'react';
 interface Props {
   repoUrl: string;
   paths: string[];
+  branch: string; // Ajout de la branche
 }
 
-const ExportButton: React.FC<Props> = ({ repoUrl, paths }) => {
+const ExportButton: React.FC<Props> = ({ repoUrl, paths, branch }) => {
   const handleExport = async () => {
     try {
       const res = await fetch('/api/git/files', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ repoUrl, paths }),
+        body: JSON.stringify({ repoUrl, paths, branch }), // Ajout de la branche au corps de la requête
       });
       if (!res.ok) {
         const err = await res.json();

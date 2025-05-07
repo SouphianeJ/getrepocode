@@ -173,6 +173,7 @@ const RepoFileExporter: React.FC = () => {
         <ExportButton
           repoUrl={`https://github.com/${selRepo}`} // L'URL du repo reste la même
           paths={selPaths} // Les paths sont relatifs à la branche sélectionnée
+          branch={selBranch} // Passer la branche sélectionnée
         />
       )}
     </div>
