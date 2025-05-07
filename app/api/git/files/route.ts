@@ -14,7 +14,7 @@ function parseGitHubUrl(url: string) {
 }
 
 export async function POST(request: Request) {
-  const { repoUrl, paths } = await request.json();
+  const { repoUrl, paths, branch} = await request.json();
   if (!repoUrl || !Array.isArray(paths)) {
     return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
   }
@@ -31,6 +31,7 @@ export async function POST(request: Request) {
         owner: info.owner,
         repo: info.repo,
         path,
+        ref: branch,
       });
       if ('content' in res.data && res.data.content) {
         const content = Buffer.from(res.data.content, 'base64').toString('utf-8');
