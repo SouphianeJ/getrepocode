@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #333; /* Ligne de séparation subtile */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Ombre portée subtile */
   }
   
   .navbar-brand {
@@ -33,6 +34,7 @@ body {
     color: #fff;
     text-transform: uppercase; /* Style brutal */
     letter-spacing: 0.1em;
+    text-shadow: 0 0 5px #0fa; /* Neon text shadow */
   }
   
   .navbar-nav {
@@ -52,6 +54,7 @@ body {
     padding: 0.5rem 0;
     display: block;
     position: relative; /* Pour l'effet de soulignement */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition pour le hover */
   }
   
   .nav-link::after {
@@ -61,10 +64,15 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #80cbc4;
+    background-color: #0fa; /* Neon color for the underline */
     transition: width 0.3s ease;
   }
   
+  .nav-link:hover {
+    color: #0fa; /* Neon color on hover */
+    text-shadow: 0 0 5px #0fa; /* Neon text shadow on hover */
+  }
+
   .nav-link:hover::after {
     width: 100%;
   }
@@ -76,16 +84,12 @@ body {
     text-align: center;
     border-top: 1px solid #333; /* Ligne de séparation subtile */
     margin-top: 4rem; /* Espacement avec le contenu principal */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Ombre portée subtile */
   }
   
   .footer-text {
     color: #aaa;
     font-size: 0.9rem;
-  }
-  
-  /* Effets de style impactants (exemple - ombre portée subtile) */
-  .navbar, .footer {
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
   }
   
   /* Style brutal pour les boutons (exemple) */
@@ -96,13 +100,12 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour le hover */
     text-transform: uppercase; /* Ajout d'un style brutal */
     letter-spacing: 0.05em; /* Ajout d'un style brutal */
   }
   
   .button:hover {
     background-color: #555;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.5); /* Neon shadow on hover */
   }
-
- 
