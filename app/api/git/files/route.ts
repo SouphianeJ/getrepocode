@@ -35,7 +35,15 @@ export async function POST(request: Request) {
       });
       if ('content' in res.data && res.data.content) {
         const content = Buffer.from(res.data.content, 'base64').toString('utf-8');
-        parts.push(`// File: ${path}\n${content}`);
+        let contentomodify = content;
+        const lines = contentomodify.split("\n");
+        if (lines[0].trim().startsWith("//")) {
+          lines.shift();
+          // Also drop leading blank line if any
+          if (lines[0]?.trim() === "") lines.shift();
+          contentomodify = lines.join("\n");
+        }
+        parts.push(`// File: ${path}\n${contentomodify}`);
       }
     }
     const result = parts.join('\n\n');
