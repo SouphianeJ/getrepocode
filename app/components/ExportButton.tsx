@@ -36,7 +36,7 @@ const ExportButton: React.FC<Props> = ({ repoUrl, paths, branch }) => {
   };
 
   return (
-    <button onClick={handleExport} disabled={paths.length === 0}>
+    <button onClick={handleExport} className="button" disabled={paths.length === 0}>
       Exporter la sélection
     </button>
   );

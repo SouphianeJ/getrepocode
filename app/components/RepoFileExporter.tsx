@@ -114,7 +114,15 @@ const RepoFileExporter: React.FC = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Export de fichiers GitHub</h1>
+      <h1 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em',
+            textShadow: '0 0 5px #0fa',
+            marginBottom: '20px'
+          }}>Export de fichiers GitHub</h1>
 
       {loadingRepos && <p>Chargement des dépôts…</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}

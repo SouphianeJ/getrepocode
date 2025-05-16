@@ -10,7 +10,7 @@ interface Props {
 }
 
 const RepoSelector: React.FC<Props> = ({ repos, selected, onSelect }) => (
-  <div>
+  <div style={{ marginBottom: '1em' }}>
     <label htmlFor="repo">Dépôt : </label>
     <select
       id="repo"

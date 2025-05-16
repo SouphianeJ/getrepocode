@@ -29,7 +29,7 @@ const FileSelector: React.FC<Props> = ({ files, selected, onChange }) => {
 
   return (
     <div style={{ margin: '1em 0' }}>
-      <button onClick={toggleAll} style={{ marginBottom: 8 }}>
+      <button onClick={toggleAll} className="button" style={{ marginBottom: 8 }}>
         {allSelected ? 'Tout désélectionner' : 'Tout sélectionner'}
       </button>
       <div style={{ maxHeight: 240, overflowY: 'auto', border: '1px solid #ddd', padding: 8 }}>

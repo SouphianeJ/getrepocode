@@ -103,9 +103,33 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour le hover */
     text-transform: uppercase; /* Ajout d'un style brutal */
     letter-spacing: 0.05em; /* Ajout d'un style brutal */
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.2); /* Neon shadow */
   }
   
   .button:hover {
     background-color: #555;
     box-shadow: 0 0 10px rgba(0, 255, 170, 0.5); /* Neon shadow on hover */
+  }
+
+  /* Input & Select styles */
+  select, input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  select:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #0fa;
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.5);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #f0f0f0;
   }
